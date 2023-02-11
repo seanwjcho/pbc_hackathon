@@ -1,2 +1,3 @@
-# pbc_hackathon
-Penn Blockchain Conference Hackathon 2023
+# Penn Blockchain Conference Hackathon 2023
+
+Team Members: Sean Cho, Ahmed Abdellah, Sindhura Mente

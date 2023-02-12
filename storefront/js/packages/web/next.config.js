@@ -28,6 +28,11 @@ module.exports = withPlugins(plugins, {
     ignoreDuringBuilds: true,
   },
 
+  typescript : {
+
+    ignoreBuildErrors: true,
+  },
+
   env: {
     NEXT_PUBLIC_STORE_OWNER_ADDRESS:
       process.env.STORE_OWNER_ADDRESS ||

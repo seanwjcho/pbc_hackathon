@@ -53,6 +53,43 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
       )}
       <Layout>
         <Content style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <Col style={{ width: '100%', marginTop: 32 }}>
+            <Row>
+              <Tabs
+                activeKey={activeKey}
+                onTabClick={key => setActiveKey(key as LiveAuctionViewState)}
+              >
+                <TabPane
+                  tab={
+                    <>
+                      <span className="live"></span> Live
+                    </>
+                  }
+                  key={LiveAuctionViewState.All}
+                ></TabPane>
+                {hasResaleAuctions && (
+                  <TabPane
+                    tab="Secondary Marketplace"
+                    key={LiveAuctionViewState.Resale}
+                  ></TabPane>
+                )}
+                <TabPane tab="Ended" key={LiveAuctionViewState.Ended}></TabPane>
+                {connected && (
+                  <TabPane
+                    tab="Participated"
+                    key={LiveAuctionViewState.Participated}
+                  ></TabPane>
+                )}
+                {connected && (
+                  <TabPane
+                    tab="My Live Auctions"
+                    key={LiveAuctionViewState.Own}
+                  ></TabPane>
+                )}
+              </Tabs>
+            </Row>
+            
+          </Col>
         </Content>
       </Layout>
     </>

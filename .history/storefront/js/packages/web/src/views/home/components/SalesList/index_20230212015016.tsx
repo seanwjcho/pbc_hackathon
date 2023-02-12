@@ -53,6 +53,10 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
       )}
       <Layout>
         <Content style={{ display: 'flex', flexWrap: 'wrap' }}>
+          <Col style={{ width: '100%', marginTop: 32 }}>
+            
+            
+          </Col>
         </Content>
       </Layout>
     </>

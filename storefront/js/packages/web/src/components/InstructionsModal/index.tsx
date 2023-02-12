@@ -108,19 +108,16 @@ export const InstructionsModal: React.FC<ModalProps> = ({
           <ContentCard
             title={cardProps[0].title}
             description={cardProps[0].description}
-            imgSrc={cardProps[0].imgSrc}
             endElement={cardProps[0].endElement}
           />
           <ContentCard
             title={cardProps[1].title}
             description={cardProps[1].description}
-            imgSrc={cardProps[1].imgSrc}
             endElement={cardProps[1].endElement}
           />
           <ContentCard
             title={cardProps[2].title}
             description={cardProps[2].description}
-            imgSrc={cardProps[2].imgSrc}
             endElement={cardProps[2].endElement}
           />
         </ModalContent>

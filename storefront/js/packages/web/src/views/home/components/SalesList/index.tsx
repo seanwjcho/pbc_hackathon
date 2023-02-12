@@ -43,7 +43,7 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
     <>
       {!props.collectionMintFilter && (
         <Banner
-          src="https://i.imgur.com/EHCfMX7.jpg"
+          src="/main-banner.svg"
           headingText="💖 Charity Chain 🔗"
           subHeadingText="Harnessing the power of the Solana Ecosystem to deliver relief
           globally."

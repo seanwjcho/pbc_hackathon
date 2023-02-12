@@ -1,7 +1,14 @@
+import { useMeta } from '@oyster/common';
 import React, { FC } from 'react';
 
 export const LoaderProvider: FC = ({ children }) => {
-  return <>{children}</>;
+  const { isLoading } = useMeta();
+
+  return (
+    <>
+      {children}
+    </>
+  );
 };
 
 export const Spinner = () => {

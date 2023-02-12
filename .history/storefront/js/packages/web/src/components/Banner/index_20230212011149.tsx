@@ -36,11 +36,8 @@ export const Banner = (props: {
       <div id="mobile-banner">
         <img className="banner-img" src={props.src} />
         <div className="banner-content">
-          <div id={'main-heading'}>Charity Chain</div>
-          <div id={'sub-heading'}>
-            Harnessing the power of the Solana Ecosystem to deliver relief
-            globally.
-          </div>
+          <div id={'main-heading'}>{props.headingText}</div>
+          <div id={'sub-heading'}>{props.subHeadingText}</div>
           {props.actionComponent}
         </div>
       </div>
@@ -58,7 +55,6 @@ export const Banner = (props: {
           {props.children}
           <div className="powered-by">
             <span>
-              POWERED BY <b>SOLANA</b>
             </span>
           </div>
         </div>

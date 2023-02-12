@@ -37,10 +37,7 @@ export const Banner = (props: {
         <img className="banner-img" src={props.src} />
         <div className="banner-content">
           <div id={'main-heading'}>Charity Chain</div>
-          <div id={'sub-heading'}>
-            Harnessing the power of the Solana Ecosystem to deliver relief
-            globally.
-          </div>
+          <div id={'sub-heading'}>Harnessing the power of the Solana Ecosystem to deliver relief globally.</div>
           {props.actionComponent}
         </div>
       </div>

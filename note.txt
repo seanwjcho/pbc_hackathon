@@ -1,0 +1,3 @@
+art-content__wrapper // for editing nft cards under "my nft"
+
+index.tsx appbar, in components

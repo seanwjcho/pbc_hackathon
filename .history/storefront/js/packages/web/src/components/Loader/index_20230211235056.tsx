@@ -6,12 +6,19 @@ export const LoaderProvider: FC = ({ children }) => {
 
   return (
     <>
-      <div className={`loader-container ${isLoading ? 'active' : ''}`}></div>
+      <div className={`loader-container ${isLoading ? 'active' : ''}`}>
+        <div className="loader-block">
+          <div className="loader-title">loading</div>
+          <Spinner />
+        </div>
+      </div>
       {children}
     </>
   );
 };
 
 export const Spinner = () => {
-  return <div></div>;
-};
+  return (
+   <div></div>
+  );
+  };

@@ -43,7 +43,29 @@ export const ArtSelector = (props: ArtSelectorProps) => {
   return (
     <>
       <div className="artwork-grid">
-        
+        {selected.map(m => {
+          const key = m?.metadata.pubkey || '';
+          return (
+            <AuctionItemCard
+              key={key}
+              current={m}
+              onSelect={open}
+              onClose={() => {
+                setSelected(selected.filter(_ => _.metadata.pubkey !== key));
+                confirm();
+              }}
+            />
+          );
+        })}
+        {(allowMultiple || selectedItems.size === 0) && (
+          <div
+            className="ant-card ant-card-bordered ant-card-hoverable art-card"
+            style={{ width: 200, height: 300, display: 'flex' }}
+            onClick={open}
+          >
+            <span className="text-center">Add an NFT</span>
+          </div>
+        )}
       </div>
 
       <Modal
@@ -64,8 +86,43 @@ export const ArtSelector = (props: ArtSelectorProps) => {
           className="content-action"
           style={{ overflowY: 'auto', height: '50vh' }}
         >
-          
-          
+          <div className="artwork-grid" style={{ maxHeight: '50%' }}>
+            {items.map(m => {
+              const id = m.metadata.pubkey;
+              const isSelected = selectedItems.has(id);
+
+              const onSelect = () => {
+                let list = [...selectedItems.keys()];
+                if (allowMultiple) {
+                  list = [];
+                }
+
+                const newSet = isSelected
+                  ? new Set(list.filter(item => item !== id))
+                  : new Set([...list, id]);
+
+                const selected = items.filter(item =>
+                  newSet.has(item.metadata.pubkey),
+                );
+                setSelected(selected);
+
+                if (!allowMultiple) {
+                  confirm();
+                }
+              };
+
+              return (
+                <div key={id}>
+                  <AuctionItemCard
+                    key={id}
+                    isSelected={isSelected}
+                    current={m}
+                    onSelect={onSelect}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </Row>
         <Row>
           <Button

@@ -47,6 +47,18 @@ export const ArtworksView = () => {
 
   const artworkGrid = (
     <div className="artwork-grid">
+      {isDataLoading &&
+        [...Array(10)].map((_, idx) => <CardLoader key={idx} />)}
+      {!isDataLoading &&
+        userItems.map(item => {
+          const pubkey = isMetadata(item)
+            ? item.pubkey
+            : isPack(item)
+            ? item.provingProcessKey
+            : item.edition?.pubkey || item.metadata.pubkey;
+
+          return <ItemCard item={item} key={pubkey} />;
+        })}
     </div>
   );
 

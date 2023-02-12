@@ -64,8 +64,43 @@ export const ArtSelector = (props: ArtSelectorProps) => {
           className="content-action"
           style={{ overflowY: 'auto', height: '50vh' }}
         >
-          
-          
+          <div className="artwork-grid" style={{ maxHeight: '50%' }}>
+            {items.map(m => {
+              const id = m.metadata.pubkey;
+              const isSelected = selectedItems.has(id);
+
+              const onSelect = () => {
+                let list = [...selectedItems.keys()];
+                if (allowMultiple) {
+                  list = [];
+                }
+
+                const newSet = isSelected
+                  ? new Set(list.filter(item => item !== id))
+                  : new Set([...list, id]);
+
+                const selected = items.filter(item =>
+                  newSet.has(item.metadata.pubkey),
+                );
+                setSelected(selected);
+
+                if (!allowMultiple) {
+                  confirm();
+                }
+              };
+
+              return (
+                <div key={id}>
+                  <AuctionItemCard
+                    key={id}
+                    isSelected={isSelected}
+                    current={m}
+                    onSelect={onSelect}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </Row>
         <Row>
           <Button

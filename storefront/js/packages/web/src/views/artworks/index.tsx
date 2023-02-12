@@ -82,7 +82,7 @@ export const ArtworksView = () => {
                 tab={<span className="tab-title">Explore Available Relief NFTs</span>}
                 key={ArtworkViewState.Metaplex}
               >
-                {artworkGrid}
+                <img src="https://i.imgur.com/AeJbTRT.png" alt = "nft"></img>
               </TabPane>
               {connected && (
                 <TabPane

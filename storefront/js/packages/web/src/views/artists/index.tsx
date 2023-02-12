@@ -46,7 +46,8 @@ export const ArtistsView = () => {
   return (
     <Layout style={{ margin: 0, marginTop: 30 }}>
       <Content style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {artistGrid}
+        <img src="https://i.imgur.com/N1oFyY9.png" alt="dao"></img>
+        <a href="https://app.realms.today/dao/3s82iFpNifM7Nq64REUg6wgEJVwZb1pJaSuna9tu7uoi?cluster=devnet">Visit Dao</a>
       </Content>
     </Layout>
   );

@@ -15,22 +15,7 @@ export const ContentCard = (props: {
     imgSrc = '',
   } = props;
   return (
-    <Card
-      cover={
-        <div className={'card-cover'}>
-          {imgSrc ? (
-            <img src={imgSrc} />
-          ) : (
-            <CreditCardOutlined
-              style={{
-                color: 'rgba(179, 136, 245, 1)',
-                fontSize: 18,
-              }}
-            />
-          )}
-        </div>
-      }
-    >
+    <Card>
       <div className={'body-title'}>{title}</div>
       <div className={'body-content'}>{description}</div>
       {endElement}

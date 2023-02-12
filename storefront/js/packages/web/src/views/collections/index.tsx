@@ -9,7 +9,7 @@ export const CollectionsView = () => {
 
   return (
     <Layout style={{ margin: 0, marginTop: 30, alignItems: 'center' }}>
-      <span className={'collections-title'}>Collections</span>
+      <span className={'collections-title'}>How It Works</span>
       <Row className={'collections-layout-container'} gutter={32}>
         {liveCollections.map(collection => {
           const pubkey = collection.pubkey;

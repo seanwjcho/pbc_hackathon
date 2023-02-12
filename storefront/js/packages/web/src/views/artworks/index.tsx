@@ -89,7 +89,7 @@ export const ArtworksView = () => {
                   tab={<span className="tab-title">Owned</span>}
                   key={ArtworkViewState.Owned}
                 >
-                  {artworkGrid}
+                  <img src="ohno.jpg">NFTid = 52, Collection = Syria Relief</img>
                 </TabPane>
               )}
               {connected && (

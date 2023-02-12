@@ -27,7 +27,7 @@ export const HowToBuyModal: React.FC<HowToBuyModalProps> = ({
           description: `To fund your wallet, you’ll need to purchase SOL tokens. Open your wallet, and tap “Deposit SOL”.`,
         },
         {
-          title: `Connect your wallet to 💖 Charity Chain 🔗`,
+          title: `Connect your wallet to Charity Chain 🔗`,
           description: `To connect your wallet, tap “Connect Wallet” here on the site. Select the Phantom option, and your wallet will connect. After that, you can start bidding on NFTs.`,
           endElement: <ConnectButton className={'secondary-btn'} />,
         },

@@ -79,7 +79,7 @@ export const ArtworksView = () => {
               tabBarExtraContent={refreshButton}
             >
               <TabPane
-                tab={<span className="tab-title">All</span>}
+                tab={<span className="tab-title">Explore Available Relief NFTs</span>}
                 key={ArtworkViewState.Metaplex}
               >
                 {artworkGrid}
@@ -90,14 +90,6 @@ export const ArtworksView = () => {
                   key={ArtworkViewState.Owned}
                 >
                   <img src="https://i.imgur.com/zE8dJWS.jpg" alt="a"></img>
-                </TabPane>
-              )}
-              {connected && (
-                <TabPane
-                  tab={<span className="tab-title">Created</span>}
-                  key={ArtworkViewState.Created}
-                >
-                  {artworkGrid}
                 </TabPane>
               )}
             </Tabs>

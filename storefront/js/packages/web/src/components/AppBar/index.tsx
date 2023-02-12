@@ -17,7 +17,7 @@ import { MobileNavbar } from '../MobileNavbar';
 const getDefaultLinkActions = (connected: boolean) => {
   return [
     <Link to={`/`} key={'explore'}>
-      <Button className="app-btn">About</Button>
+      <Button className="app-btn">Home</Button>
     </Link>,
     <Link to={`/collections`} key={'collections'}>
       <Button className="app-btn">How it Works</Button>

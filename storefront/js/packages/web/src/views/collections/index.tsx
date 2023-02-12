@@ -10,25 +10,11 @@ export const CollectionsView = () => {
   return (
     <Layout style={{ margin: 0, marginTop: 30, alignItems: 'center' }}>
       <span className={'collections-title'}>How It Works</span>
-      <Row className={'collections-layout-container'} gutter={32}>
-        {liveCollections.map(collection => {
-          const pubkey = collection.pubkey;
-          return (
-            <Col
-              key={pubkey}
-              xs={24}
-              sm={24}
-              md={24}
-              lg={12}
-              className={'col-container'}
-            >
-              <Link key={pubkey} to={`/collection/${collection.mint}`}>
-                <CollectionCard pubkey={pubkey} key={pubkey} />
-              </Link>
-            </Col>
-          );
-        })}
-      </Row>
+      <h6>CharityChain NFT Holders are granted voting power in the associated DAO.
+
+The DAO is responsible for making decisions on the allocation of funds, project progress, and any other critical issues related to the charity. NFT holders can vote on proposals and have a say in the direction of their chosen charity project
+
+NFT holders will be ranked based on their activity within the DAO. At the end of the project, the best holders will be drafted for an in-person experience related to the actual project they funded</h6>
     </Layout>
   );
 };

@@ -89,7 +89,7 @@ export const ArtworksView = () => {
                   tab={<span className="tab-title">Owned</span>}
                   key={ArtworkViewState.Owned}
                 >
-                  <img src="ohno.jpg" alt="a"></img>
+                  <img src="https://i.imgur.com/zE8dJWS.jpg" alt="a"></img>
                 </TabPane>
               )}
               {connected && (

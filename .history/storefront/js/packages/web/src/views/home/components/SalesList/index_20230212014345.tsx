@@ -44,9 +44,9 @@ export const SalesListView = (props: { collectionMintFilter?: string }) => {
       {!props.collectionMintFilter && (
         <Banner
           src="/main-banner.svg"
-          headingText="💖 Charity Chain ⛓️"
+          headingText="Charity Chain"
           subHeadingText="Harnessing the power of the Solana Ecosystem to deliver relief
-          globally 🌍"
+          globally."
           actionComponent={<HowToBuyModal buttonClassName="secondary-btn" />}
           useBannerBg
         />
